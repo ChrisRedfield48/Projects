@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NIP.SYS · Projects</title>
+  <link rel="shortcut icon" href="Unofficial_JavaScript_logo_2.svg.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="reset2.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <header>
+    <div class="header-inner">
+      <div class="header-left">
+        <div class="logo-wrap">
+          <svg class="logo-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="46" height="46" rx="3" stroke="#E8D84A" stroke-width="1.2" fill="none"/>
+            <rect x="6" y="6" width="36" height="36" rx="1" stroke="#E8D84A" stroke-width="0.5" fill="none" opacity="0.3"/>
+            <text x="24" y="30" text-anchor="middle" font-family="DM Mono, monospace" font-size="14" font-weight="500" fill="#E8D84A">JS</text>
+            <circle cx="6"  cy="6"  r="1.5" fill="#E8D84A" opacity="0.6"/>
+            <circle cx="42" cy="6"  r="1.5" fill="#E8D84A" opacity="0.6"/>
+            <circle cx="6"  cy="42" r="1.5" fill="#E8D84A" opacity="0.6"/>
+            <circle cx="42" cy="42" r="1.5" fill="#E8D84A" opacity="0.6"/>
+          </svg>
+          <div>
+            <div class="eyebrow">◆ NIP.SYS · CHRIS ◆</div>
+            <h1>Мои <em>проекты</em></h1>
+          </div>
+        </div>
+      </div>
+      <button id="theme-toggle" class="btn-theme">
+        <span class="btn-icon">◑</span>
+        <span id="theme-label">Светлая тема</span>
+      </button>
+    </div>
+    <div class="header-divider"></div>
+  </header>
+
+  <main>
+    <div class="counter-line">
+      <span class="counter-label">LOADED</span>
+      <span id="project-count">—</span>
+      <span class="counter-label">PROJECTS</span>
+    </div>
+    <div id="projects-container" class="projects-grid"></div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© 2026 NIP.SYS · CHRIS</span>
+      <a href="https://github.com/ChrisRedfield48" target="_blank">GITHUB ↗</a>
+    </div>
+  </footer>
+
+  <script src="js.js"></script>
+</body>
+</html>
