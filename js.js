@@ -45,7 +45,7 @@ myProjects.forEach((project, i) => {
     </div>
     <h2 class="card-title">${project.title}</h2>
     <p class="card-desc">${project.description}</p>
-    <a class="card-link" href="${project.link}" target="_blank">
+    <a class="card-link" href="${project.link}" target="_blank" rel="noopener noreferrer">
       Смотреть проект <span class="arrow">→</span>
     </a>
   `;
