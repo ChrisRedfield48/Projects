@@ -225,6 +225,7 @@ main {
   background: var(--gold-glow);
   opacity: 0;
   transition: opacity 0.3s;
+  pointer-events: none;
 }
 
 .project-card:hover { background: var(--surface); }
@@ -251,6 +252,12 @@ main {
   border: 1px solid rgba(232,216,74,0.2);
   padding: 0.2rem 0.5rem;
   border-radius: 2px;
+}
+
+.card-tag.wip {
+  color: var(--muted);
+  background: transparent;
+  border-color: var(--border);
 }
 
 .card-title {
@@ -321,7 +328,4 @@ footer {
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(16px); }
   to   { opacity: 1; transform: translateY(0); }
-}
-.project-card::before {
-  pointer-events: none;
 }

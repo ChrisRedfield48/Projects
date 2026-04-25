@@ -39,7 +39,7 @@ projects-site/
 
 ### Данные — массив `myProjects`
 
-Каждый проект — объект с тремя полями:
+Каждый проект — объект с четырьмя полями:
 
 ```js
 {
@@ -97,13 +97,17 @@ document.body.classList.toggle('light-theme');
 
 ## 🗂️ Проекты на витрине
 
-| # | Проект | Тег |
-|---|--------|-----|
-| 01 | Zodiac Calculator | JS · Logic |
-| 02 | Birthday Search | JS · Data |
-| 03 | Проект Lexi | HTML · CSS |
-| 04 | Проект Voda | HTML · CSS |
-| 05 | JS Repository | GitHub |
+| # | Проект | Тег | Статус |
+|---|--------|-----|--------|
+| 01 | Zodiac Calculator | JS · Logic | ✅ Готов |
+| 02 | Birthday Search | JS · Data | ✅ Готов |
+| 03 | Проект Lexi | HTML · CSS · JS | ✅ Готов |
+| 04 | JS Repository | GitHub | ✅ Готов |
+| 05 | Calculator | JS · DOM | 🔧 В разработке |
+| 06 | Tic-Tac-Toe | JS · Logic | 🔧 В разработке |
+| 07 | Quiz App | JS · DOM | 🔧 В разработке |
+| 08 | Todo List | JS · DOM | 🔧 В разработке |
+| 09 | Weather App | JS · API | 🔧 В разработке |
 
 ---
 

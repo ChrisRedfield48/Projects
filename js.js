@@ -13,21 +13,45 @@ const myProjects = [
   },
   {
     title: 'Проект Lexi',
-    tag: 'HTML · CSS',
+    tag: 'HTML · CSS · JS',
     description: 'Верстка и логика проекта Lexi.',
     link: 'https://chrisredfield48.github.io/Lexi/'
-  },
-  {
-    title: 'Проект Voda',
-    tag: 'HTML · CSS',
-    description: 'Интерфейс проекта Voda.',
-    link: 'https://chrisredfield48.github.io/voda/'
   },
   {
     title: 'JS Repository',
     tag: 'GitHub',
     description: 'Репозиторий со всеми скриптами, алгоритмами и конспектами по JavaScript.',
     link: 'https://github.com/ChrisRedfield48/js/tree/main'
+  },
+  {
+    title: 'Calculator',
+    tag: 'В разработке',
+    description: 'Калькулятор с базовыми арифметическими операциями. Практика событий и работы с DOM.',
+    link: '#'
+  },
+  {
+    title: 'Tic-Tac-Toe',
+    tag: 'В разработке',
+    description: 'Крестики-нолики. Игровая логика, определение победителя, работа с массивами.',
+    link: '#'
+  },
+  {
+    title: 'Quiz App',
+    tag: 'В разработке',
+    description: 'Викторина с вопросами и вариантами ответов. Счётчик очков, навигация между вопросами.',
+    link: '#'
+  },
+  {
+    title: 'Todo List',
+    tag: 'В разработке',
+    description: 'Список задач с добавлением и удалением. Практика работы с DOM и массивами.',
+    link: '#'
+  },
+  {
+    title: 'Weather App',
+    tag: 'В разработке',
+    description: 'Приложение погоды с выводом данных на сайт. Работа с API и fetch-запросами.',
+    link: '#'
   }
 ];
 
@@ -41,7 +65,7 @@ myProjects.forEach((project, i) => {
   card.innerHTML = `
     <div class="card-top">
       <span class="card-num">${String(i + 1).padStart(2, '0')}</span>
-      <span class="card-tag">${project.tag}</span>
+      <span class="card-tag ${project.tag === 'В разработке' ? 'wip' : ''}">${project.tag}</span>
     </div>
     <h2 class="card-title">${project.title}</h2>
     <p class="card-desc">${project.description}</p>
