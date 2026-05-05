@@ -1,8 +1,14 @@
+```
+┌─────────────────────────────────────────────────────────────┐
+│                                                             │
+│   ◆  N I P . S Y S  ·  P R O J E C T S  H U B  ◆         │
+│                                                             │
+│   chrisredfield48.github.io/projects                        │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+```
+
 <div align="center">
-
-# ◆ NIP.SYS · Projects
-
-**Витрина JavaScript-проектов**
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
@@ -12,109 +18,74 @@
 
 ---
 
-## 📖 О проекте
+## О проекте
 
-Страница-витрина с карточками всех JS-проектов. Карточки генерируются динамически из массива данных. Есть переключатель тёмной и светлой темы.
+Витрина JavaScript-проектов в стиле NIP.SYS. Карточки генерируются динамически из массива — добавить новый проект значит дописать один объект. Есть переключатель тёмной / светлой темы.
 
 ---
 
-## 📁 Структура проекта
+## Структура
 
 ```
-projects-site/
-├── index.html   ← разметка страницы
-├── js.js        ← данные проектов и логика
-└── style.css    ← стили (тёмная тема, анимации)
+projects-hub/
+├── index.html      ← разметка страницы
+├── style.css       ← стили, CSS-переменные, анимации
+└── js.js           ← массив проектов + рендер карточек
 ```
 
 ---
 
-## 🚀 Запуск
+## Как устроено
 
-Никаких зависимостей. Просто открой `index.html` в браузере.
-
----
-
-## ⚙️ Как работает
-
-### Данные — массив `myProjects`
-
-Каждый проект — объект с четырьмя полями:
+**Данные** — массив `myProjects`, каждый элемент:
 
 ```js
 {
-  title:       'Zodiac Calculator',
-  tag:         'JS · Logic',
-  description: 'Определение знака зодиака по дате рождения.',
-  link:        'https://chrisredfield48.github.io/zodiac/'
+  title:       'Calculator',
+  tag:         'JS · DOM',
+  description: 'Калькулятор с базовыми операциями.',
+  link:        'https://chrisredfield48.github.io/Calculator/'
 }
 ```
 
-### Рендер карточек
+**Рендер** — `forEach` создаёт `div.project-card` и вставляет в грид.
+`animationDelay` на каждую карточку даёт эффект последовательного появления.
 
-Массив перебирается через `forEach` — для каждого проекта создаётся `div.project-card` и вставляется в грид через `appendChild`:
+**Тема** — клик по кнопке переключает класс `light-theme` на `<body>`.
+Все цвета живут в CSS-переменных, переключение мгновенное.
 
-```js
-myProjects.forEach((project, i) => {
-  const card = document.createElement('div');
-  card.classList.add('project-card');
-  card.style.animationDelay = `${i * 0.08}s`;
-  card.innerHTML = `...`;
-  container.appendChild(card);
-});
+---
+
+## Дизайн
+
+```
+Фон          #0a0a08    ░░ почти чёрный
+Акцент       #E8D84A    ▓▓ золото
+Заголовки    Playfair Display  (serif, italic)
+Интерфейс    DM Mono           (monospace)
 ```
 
-Задержка `animationDelay` создаёт эффект последовательного появления карточек.
+Анимации: `fadeUp` на карточках · `logoPulse` на логотипе · `shimmer` на разделителе · курсор `▮` мигает в заголовке.
 
-### Переключатель темы
+---
 
-Клик по кнопке toggleит класс `light-theme` на `<body>`. Все цвета переключаются через CSS-переменные:
+## Проекты
 
-```js
-document.body.classList.toggle('light-theme');
+```
+ 01  Zodiac Calculator    JS · Logic        ✦ live
+ 02  Birthday Search      JS · Data         ✦ live
+ 03  Проект Lexi          HTML · CSS · JS   ✦ live
+ 04  JS Repository        GitHub            ✦ live
+ 05  Calculator           JS · DOM          ✦ live
+ ──
+ 06  Tic-Tac-Toe          JS · Logic        ○ wip
+ 07  Quiz App             JS · DOM          ○ wip
+ 08  Todo List            JS · DOM          ○ wip
+ 09  Weather App          JS · API          ○ wip
 ```
 
 ---
 
-## 🎨 Дизайн
-
-В стиле NIP.SYS:
-
-| Элемент | Значение |
-|---------|----------|
-| Фон | `#0a0a08` |
-| Акцент | `#E8D84A` (золото) |
-| Шрифт заголовков | `Playfair Display` |
-| Шрифт интерфейса | `DM Mono` |
-
-**Анимации:**
-- Карточки появляются снизу с задержкой (`fadeUp`)
-- Логотип пульсирует с золотым свечением
-- Разделитель в шапке плавно расширяется (`shimmer`)
-- Курсор `▮` мигает после заголовка
-
----
-
-## 🗂️ Проекты на витрине
-
-| # | Проект | Тег | Статус |
-|---|--------|-----|--------|
-| 01 | Zodiac Calculator | JS · Logic | ✅ Готов |
-| 02 | Birthday Search | JS · Data | ✅ Готов |
-| 03 | Проект Lexi | HTML · CSS · JS | ✅ Готов |
-| 04 | JS Repository | GitHub | ✅ Готов |
-| 05 | Calculator | JS · DOM | 🔧 В разработке |
-| 06 | Tic-Tac-Toe | JS · Logic | 🔧 В разработке |
-| 07 | Quiz App | JS · DOM | 🔧 В разработке |
-| 08 | Todo List | JS · DOM | 🔧 В разработке |
-| 09 | Weather App | JS · API | 🔧 В разработке |
-
----
-
-<div align="center">
-
 ```
-© 2026 NIP.SYS · CHRIS · RUSSIA → BELGRADE
+© 2026  NIP.SYS · CHRIS · RUSSIA → BELGRADE
 ```
-
-</div>
