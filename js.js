@@ -27,7 +27,7 @@ const myProjects = [
     title: 'Calculator',
     tag: 'JS · DOM',
     description: 'Калькулятор с базовыми арифметическими операциями. Практика событий и работы с DOM.',
-    link: 'https://chrisredfield48.github.io/Calculator/'
+    link: 'https://github.com/ChrisRedfield48/Calculator'
   },
   {
     title: 'Tic-Tac-Toe',
