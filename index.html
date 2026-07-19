@@ -1,72 +1,96 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>projects.js — NIP.SYS</title>
-  <meta name="description" content="Портфолио JavaScript-проектов как исходный код. NIP.SYS · Chris.">
-  <meta name="color-scheme" content="dark light">
-  <meta name="theme-color" content="#0c0c0a">
-  <link rel="icon" href="Unofficial_JavaScript_logo_2.svg.png" type="image/png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>JS.SYS — NIP.SYS</title>
+<meta name="description" content="Витрина JavaScript-проектов. Живая нейросеть на фоне, проекты, контакт. NIP.SYS · Chris.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#060912">
+<link rel="icon" href="Unofficial_JavaScript_logo_2.svg.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
 
-  <div class="ide">
-    <div class="titlebar">
-      <div class="tb-left">
-        <div class="dots" aria-hidden="true"><i class="d1"></i><i class="d2"></i><i class="d3"></i></div>
-        <span class="winpath"><span class="wp-dim">~/nip.sys/</span><span id="winfile">projects.js</span></span>
-      </div>
-      <div class="tb-right">
-        <img class="brand-logo" src="Unofficial_JavaScript_logo_2.svg.png" alt="JavaScript" width="26" height="26">
-        <button id="theme-toggle" class="theme" type="button" aria-label="Переключить тему">
-          <span class="theme-ic">◑</span><span id="theme-label">light</span>
-        </button>
-      </div>
-    </div>
+<canvas id="space" aria-hidden="true"></canvas>
 
-    <div class="workspace">
-      <aside class="sidebar">
-        <div class="side-h">Explorer</div>
-        <div class="tree">
-          <div class="folder" aria-hidden="true"><span class="fold-ic">▾</span> NIP.SYS</div>
-          <button class="file active" data-file="projects" type="button"><span class="fic">{}</span>projects.js</button>
-          <button class="file" data-file="about" type="button"><span class="fic">{}</span>about.js</button>
-          <button class="file" data-file="contact" type="button"><span class="fic">{}</span>contact.js</button>
-          <a class="file ext" href="https://github.com/ChrisRedfield48" target="_blank" rel="noopener noreferrer"><span class="fic">↗</span>github</a>
-        </div>
-        <div class="side-foot">© 2026 · Chris<br><span class="sf-dim">Россия → Белград</span></div>
-      </aside>
-
-      <div class="main">
-        <div class="tabs" id="tabs">
-          <button class="tab active" data-file="projects" type="button">projects.js<span class="tab-x" aria-hidden="true">●</span></button>
-          <button class="tab" data-file="about" type="button">about.js<span class="tab-x" aria-hidden="true">●</span></button>
-          <button class="tab" data-file="contact" type="button">contact.js<span class="tab-x" aria-hidden="true">●</span></button>
-        </div>
-        <div class="editor" id="editor" tabindex="0"></div>
-      </div>
-    </div>
-
-    <div class="statusbar">
-      <div class="st-left">
-        <span class="branch"><span aria-hidden="true">⎇</span> main</span>
-        <span id="st-info">6 live · 3 wip</span>
-      </div>
-      <div class="st-right">
-        <span id="st-ln">Ln 1, Col 1</span>
-        <span class="st-sep">UTF-8</span>
-        <span class="st-sep">LF</span>
-        <span class="st-lang">JavaScript</span>
-      </div>
-    </div>
+<nav>
+  <a href="#top" class="wm"><span class="d"></span>NIP<span class="sl">//</span><b>js</b></a>
+  <div class="nav-links">
+    <a href="#about">О разделе</a>
+    <a href="#projects">Проекты</a>
+    <a href="#contact">Контакт</a>
   </div>
+</nav>
 
-  <script src="js.js"></script>
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-in">
+      <div class="eyebrow">function · event loop · dom</div>
+      <h1 class="title"><span class="a">JAVA</span><span class="b">SCRIPT</span></h1>
+      <p class="sub">async, но всегда однопоточный</p>
+    </div>
+    <div class="scroll" aria-hidden="true"><span>листай</span><span class="ch"></span></div>
+  </section>
+
+  <section class="sec" id="about">
+    <div class="wrap">
+      <div class="head rv">
+        <div class="ey">⟢ о разделе</div>
+        <h2 class="h">Первый язык</h2>
+      </div>
+      <div class="panel note rv">
+        <p>С JavaScript всё началось — учёба, первые скрипты, первые баги, которые чинил ночами. Здесь собраны проекты, на которых оттачивал синтаксис, DOM и логику. Дальше — глубже в язык, потом Python и нейросети, но фундамент отсюда.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="projects">
+    <div class="wrap">
+      <div class="head rv">
+        <div class="ey">⟢ витрина скриптов</div>
+        <h2 class="h">Проекты</h2>
+        <p class="proj-count"><span id="liveCount">0</span> задеплоено · <span id="wipCount">0</span> в разработке</p>
+      </div>
+      <div class="grid" id="projects-grid"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="contact">
+    <div class="wrap">
+      <div class="head rv">
+        <div class="ey">⟢ открытый канал</div>
+        <h2 class="h">Контакт</h2>
+      </div>
+      <div class="contact-grid rv">
+        <div>
+          <div class="status"><span class="d"></span>открыт к работе</div>
+          <div class="clinks">
+            <a class="panel clink" href="https://t.me/ChrisRedfield48" target="_blank" rel="noopener noreferrer">
+              <span class="clink-l"><span class="cl-ic">TG</span><span><span class="cl-t">Telegram</span><span class="cl-s">t.me/ChrisRedfield48</span></span></span>
+              <span class="cl-arr" aria-hidden="true">→</span>
+            </a>
+            <a class="panel clink" href="https://github.com/ChrisRedfield48" target="_blank" rel="noopener noreferrer">
+              <span class="clink-l"><span class="cl-ic">GH</span><span><span class="cl-t">GitHub</span><span class="cl-s">github.com/ChrisRedfield48</span></span></span>
+              <span class="cl-arr" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="fc">© <span id="year">2026</span> NIP.SYS · JavaScript</div>
+  <div class="fn">html · css · js — дальше python</div>
+</footer>
+
+<script src="js.js" defer></script>
 </body>
 </html>
